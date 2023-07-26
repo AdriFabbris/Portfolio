@@ -1,0 +1,329 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&display=swap');
+
+:root {
+    --font01: 'Montserrat', sans-serif;
+    --font02: 'Poppins', sans-serif;
+    --cor01: #dae2ec;
+    --cor02: #f2ebe8;
+    --cor03: #bfb9b7;
+    --cor04: #aab1b9;
+    --cor05: #798ba5;
+}
+
+/* cabeçalho */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    margin: 5px;
+}
+
+.nav-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.nav-logo p {
+    font-family: var(--font02);
+    font-size: 20px;
+    font-style: italic;
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list button {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--cor05);
+    margin: 8px;
+    transition: 0.3s;
+}
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 18vh;
+        right: 0;
+        width: 30vw;
+        height: 50vh;
+        background: rgb(255, 255, 255);
+        border-radius: 0 0 0 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+#tab {
+    overflow: hidden;
+}
+
+#tab button {
+    background-color: inherit;
+    font-family: var(--font01);
+    font-size: 16px;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: all 0.5s;
+}
+
+#tab button:hover {
+    color: var(--cor04);
+}
+
+#tab button.active {
+    background-color: var(--cor05);
+    color: white;
+    border-radius: 10px;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}
+
+/* corpo */
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.226);
+}
+
+.perfil #adri {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor02);
+    border-radius: 8px 8px 0px 0px;
+    height: 550px;
+    width: 450px;
+    margin: 20px;
+}
+
+#adri img {
+    border-radius: 50%;
+    opacity: .9;
+    margin: 20px;
+}
+
+h2 {
+    font-family: var(--font02);
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.perfil p {
+    font-family: var(--font01);
+    font-size: 25px;
+    border-top: 2px solid var(--cor05);
+    padding: 25px;
+    margin: 20px 0px 0px 0px;
+}
+
+.perfil .icones {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+.tabcontent {
+    width: 500px;
+}
+
+span {
+    font-family: var(--font02);
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+
+.nome {
+    font-family: var(--font02);
+    font-size: 30px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+p {
+    font-family: var(--font01);
+    line-height: 2em;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#curriculo {
+    font-family: var(--font01);
+    text-decoration: none;
+    background-color: var(--cor04);
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+#curriculo:hover {
+    background-color: var(--cor05);
+    font-weight: bold;
+    padding: 15px;    
+}
+
+/* formulário */
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+}
+
+label {
+    font-family: var(--font02);
+}
+
+input, textarea {
+    font-family: var(--font01);
+}
+
+input[type=enviar] {
+    background-color: var(--cor04);
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    padding: 15px 20px;
+    width: 60px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+input[type=enviar]:hover {
+    background-color: var(--cor05);
+    font-weight: bold;    
+}
+
+.contato {
+    font-family: var(--font02);
+    font-size: 50px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+/* rodapé */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 20px 10px 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+article .titulo {
+    font-family: var(--font02);
+    font-weight: bold;
+    margin: 5px;
+}
+
+article p {
+    margin: 0;
+}
+
+a img {
+    padding: 0 6px 0 6px;
+}

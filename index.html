@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <section class="nav-logo">
+            <img src="imagens/Logo-preto.png" alt="">
+            <p>/ Adri Fabbris</h1>
+        </section>
+
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <section id="tab" class="nav-list">
+            <button class="tablinks" onclick="openCity(event, 'home')" id="defaultOpen">Home</button>
+            <button class="tablinks" onclick="openCity(event, 'sobre')">Sobre Mim</button>
+            <button class="tablinks" onclick="openCity(event, 'projetos')">Projetos</button>
+            <button class="tablinks" onclick="openCity(event, 'contato')">Contato</button>
+        </section>
+    </header>
+
+    <main>
+        <section class="perfil">
+            <div id="adri">
+                <img src="imagens/adriana.png">
+                <h2>Adri Fabbris</h2>
+                <p>Front-end Developer</p>
+            </div>
+            <div class="icones">
+                <a href=""><img src="icones/icone-github.png" alt=""></a>
+                <a href=""><img src="icones/icone-linkedin.png" alt=""></a>
+                <a href=""><img src="icones/icone-twitter.png" alt=""></a>
+                <a href=""><img src="icones/icone-instagram.png" alt=""></a>
+        </section>
+
+        <section id="home" class="tabcontent">
+            <span>Olá</span>
+            <p class="nome">Eu sou a Adriana Fabbris</p>
+            <p>Este é o site oficial do meu portfólio para mostrar detalhes e experiências de trabalho no desenvolvimento web</p>
+            <a href="Curriculo.pdf" download="Curriculo.pdf" type="application/pdf" target="_blank" id="curriculo">DOWNLOAD CV</a>
+        </section>
+
+        <section id="sobre" class="tabcontent">
+            <span>Prazer,</span>
+            <p>Eu me chamo Adriana Fabbris, tenho 27 anos e sou formada em fisioterapia, porém hoje atuo na área de desenvolvimento web utilizando HTML, CSS e Javascript. Tenho buscado me aprimomar cada dia mais e desejo construir uma carreira na área de desenvolvimento web e mobile, utilizando como base as minhas habilidades de comunicação e trabalho em equipe que foram adquiridas em experiências prévias, colocando em prática todo meu conhecimento da área.</p>
+        </section>
+
+        <section id="contato" class="tabcontent">
+            <span class="contato">Entre em contato</span>
+            <form action="/action_page.php">
+                <label for="fname">Nome</label>
+                <input type="text" id="fname" name="firstname" placeholder="Seu nome..">
+                
+                <label for="femail">Email</label>
+                <input type="text" id="fname" name="firstname" placeholder="Email..">
+            
+                <label for="subject">Mensagem</label>
+                <textarea id="subject" name="subject" placeholder="Escreva aqui..." style="height:200px"></textarea>
+            
+                <input type="enviar" value="ENVIAR">
+              </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 por Adriana Fabbris</p>
+        <section>
+            <article>
+                <p class="titulo">Telefone</p>
+                <p>(11) 9.7665-7046</p>
+            </article>
+            <article>
+                <p class="titulo">Email</p>
+                <p>afabbris@outlook.com</p>
+            </article>
+            <article>
+                <p class="titulo">Redes Sociais</p>
+                <div>
+                    <a href=""><img src="icones/icone-github.png" alt=""></a>
+                    <a href=""><img src="icones/icone-linkedin.png" alt=""></a>
+                    <a href=""><img src="icones/icone-twitter.png" alt=""></a>
+                    <a href=""><img src="icones/icone-instagram.png" alt=""></a>
+                </div>
+            </article>
+        </section>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
