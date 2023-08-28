@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +30,7 @@
     </header>
 
     <main>
-        <section class="perfil">
+        <section id="perfil" class="perfil">
             <div id="adri">
                 <img src="imagens/adriana.png">
                 <h2>Adri Fabbris</h2>
@@ -45,13 +46,23 @@
         <section id="home" class="tabcontent">
             <span>Olá</span>
             <p class="nome">Eu sou a Adriana Fabbris</p>
-            <p>Este é o site oficial do meu portfólio para mostrar detalhes e experiências de trabalho no desenvolvimento web</p>
-            <a href="Curriculo.pdf" download="Curriculo.pdf" type="application/pdf" target="_blank" id="curriculo">DOWNLOAD CV</a>
+            <p>Este é o site oficial do meu portfólio para mostrar detalhes e experiências de trabalho no
+                desenvolvimento web</p>
+            <a href="Curriculo.pdf" download="Curriculo.pdf" type="application/pdf" target="_blank"
+                id="curriculo">DOWNLOAD CV</a>
         </section>
 
         <section id="sobre" class="tabcontent">
             <span>Prazer,</span>
-            <p>Eu me chamo Adriana Fabbris, tenho 27 anos e sou formada em fisioterapia, porém hoje atuo na área de desenvolvimento web utilizando HTML, CSS e Javascript. Tenho buscado me aprimomar cada dia mais e desejo construir uma carreira na área de desenvolvimento web e mobile, utilizando como base as minhas habilidades de comunicação e trabalho em equipe que foram adquiridas em experiências prévias, colocando em prática todo meu conhecimento da área.</p>
+            <p>Eu me chamo Adriana Fabbris, tenho 27 anos e sou formada em fisioterapia, porém hoje atuo na área de
+                desenvolvimento web utilizando HTML, CSS e Javascript. Tenho buscado me aprimomar cada dia mais e desejo
+                construir uma carreira na área de desenvolvimento web e mobile, utilizando como base as minhas
+                habilidades de comunicação e trabalho em equipe que foram adquiridas em experiências prévias, colocando
+                em prática todo meu conhecimento da área.</p>
+        </section>
+
+        <section id="projetos" class="tabcontent">
+            <span>Meus projetos,</span>
         </section>
 
         <section id="contato" class="tabcontent">
@@ -59,15 +70,15 @@
             <form action="/action_page.php">
                 <label for="fname">Nome</label>
                 <input type="text" id="fname" name="firstname" placeholder="Seu nome..">
-                
+
                 <label for="femail">Email</label>
                 <input type="text" id="fname" name="firstname" placeholder="Email..">
-            
+
                 <label for="subject">Mensagem</label>
                 <textarea id="subject" name="subject" placeholder="Escreva aqui..." style="height:200px"></textarea>
-            
+
                 <input type="enviar" value="ENVIAR">
-              </form>
+            </form>
         </section>
     </main>
 
@@ -95,6 +106,11 @@
     </footer>
 
     <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+        // $("#projetos").click(function () {
+        //     $("#perfil").hide();
+        // });
+    </script>
 </body>
 
 </html>
